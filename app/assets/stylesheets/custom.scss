@@ -2,10 +2,13 @@
 @import "bootstrap";
 
 /* universal */
-$gray-light: #777;
+$gray-light: #a0a0a0;
 
 body {
   padding-top: 60px;
+  background-color: #111111;
+  color: rgb(255, 255, 255);
+
 }
 
 section {
@@ -14,6 +17,8 @@ section {
 
 textarea {
   resize: vertical;
+
+
 }
 
 .center {
@@ -22,6 +27,116 @@ textarea {
     margin-bottom: 10px;
   }
 }
+
+a {
+  color: #b73333;
+  &:hover {
+    color: #902828;
+    text-decoration: underline;
+  }
+}
+
+.btn-primary, .btn {
+    color: #fff;
+    background-color: #b73333;
+    border-color: #a42e2e;
+    &:hover,  {
+      background-color: #902828;
+      border-color: #742020;
+    }
+    &:active {
+      background-color: #902828;
+      border-color: #742020;
+      &:focus {
+        background-color: #742020;
+        border-color: #401212;
+      }
+      &:hover {
+        background-color: #742020;
+        border-color: #401212;
+      }
+    }
+    &:focus {
+      background-color: #902828;
+      border-color: #742020;
+    }
+}
+
+
+
+.form-control {
+  color: #eeeeee;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #333333;
+  &:focus {
+    border-color: #e96666;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(233, 102, 102, 0.6);
+  }
+}
+
+/**********Pagination**********/
+.pagination {
+  li {
+    a {
+      color: #b73333;
+      background-color: #000;
+      border: 1px solid #383838;
+      &:hover {
+        color: #7c2323;
+        background-color: #0e0e0e;
+        border-color: #252525;
+      }
+    }
+  }
+  .active {
+    color: #000;
+    background-color: rgb(183, 51, 51);
+    border-color: #b73333;
+    a {
+      color: #000;
+      background-color: #b73333;
+      border-color: #b73333;
+      &:hover {
+        color: #000;
+        background-color: #b73333;
+        border-color: #b73333;
+      }
+    }
+  }
+  .disabled > a {
+    color: #989898;
+    background-color: #000;
+    border-color: #212121;
+    &:hover {
+      color: #8a8a8a;
+      background-color: #000;
+      border-color: #212121;
+    }
+
+  }
+
+}
+
+/**********Dropdown**********/
+
+.dropdown-menu {
+  background-color: #222;
+  li {
+    a{
+      color: #ffffff;
+      &:hover {
+        color: #bfbfbf;
+        background-color: #b73333;
+      }
+    }
+
+  }
+}
+
+
+
+
 /* typography */
 
 
@@ -53,6 +168,28 @@ p {
 
 /* header */
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+    &:hover {
+      color: #902828;
+    }
+  background-color: #222;
+  border-color: #222;
+}
+
+.navbar-inverse{
+  background-color: #222;
+  border-color: #222;
+  .navbar-nav > li > a {
+      color: #ffffff;
+      &:hover {
+        color: #902828;
+      }
+  }
+}
+
+
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -63,7 +200,7 @@ p {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: rgb(167, 0, 0);
+    color: #902828;
     text-decoration: none;
   }
 }
@@ -77,11 +214,11 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: $gray-light;
+  color: rgb(255, 255, 255);
   a {
-    color: #555;
+    color: #a0a0a0;
     &:hover {
-      color: #222;
+      color: #902828;
     }
   }
   small {
@@ -161,7 +298,7 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
+    border-left: 1px solid #2d2d2d;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -169,7 +306,7 @@ aside {
     }
     &:hover {
       text-decoration: none;
-      color: blue;
+      color: #902828;
     }
   }
   strong {
@@ -199,6 +336,9 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+  background-color: #000000;
+  border: 1px solid #222222;
+
 }
 
 input {
@@ -242,7 +382,7 @@ input {
   li {
     overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
+    border-bottom: 1px solid #111111;;
   }
 }
 
@@ -253,7 +393,7 @@ input {
   padding: 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid #111111;
   }
   .user {
     margin-top: 5em;
@@ -291,4 +431,8 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.jumbotron {
+  background-color: #3a3a3a;
 }
