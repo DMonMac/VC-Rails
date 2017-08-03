@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params) # Defined below and under 'private'
     if @user.save
       flash[:success] = "You have successfully signed in. Welcome, #{@user.first_name}!"
-      redirect_to @user # Handle successful save: Go to another page/path. Here the command equals 'redirect_to user_url(@user)'
+      redirect_to @user # Handle successful save: Go to another page/path. Here the command equals 'redirect_to user_url(@user) = '/users/:id'
     else
       render 'new'
     end
