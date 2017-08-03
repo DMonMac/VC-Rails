@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params) # Defined below and under 'private'
     if @user.save
+      log_in @user # logs new users right away after sign up
       flash[:success] = "You have successfully signed in. Welcome, #{@user.first_name}!"
       redirect_to @user # Handle successful save: Go to another page/path. Here the command equals 'redirect_to user_url(@user) = '/users/:id'
     else
