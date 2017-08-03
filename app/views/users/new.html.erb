@@ -4,20 +4,26 @@
   <%= render 'shared/error_messages'%>
 
       <%= f.label :email %>
+      <br>
       <%= f.email_field :email %>
       <br>
 
       <%= f.label :first_name %>
+      <br>
       <%= f.text_field :first_name %>
       <br>
 
       <%= f.label :last_name %>
+      <br>
       <%= f.text_field :last_name %>
       <br>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-      <br>
+      <div class="field">
+        <label for="user_password">Password</label>
+        <em>(8 characters minimum)</em>
+        <br>
+        <input autocomplete="off" type="password" name="user[password]" id="user_password">
+      </div>
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <br>
