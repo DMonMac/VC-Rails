@@ -1,4 +1,12 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:index, :edit, :update]
+  before_action :correct_user, only: [:edit, :update]
+
+  def index
+    @users = User.all # This should list all users
+    # @users = User.paginate(page: params[:page]) -> This adds pagination.
+  end
+
   def show
     @user = User.find(params[:id]) # This is similar to User.find(<user_id which was auto generated when creating a new user>)
   end
@@ -18,6 +26,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @user.update_attributes(user_params)
+      # Action after successful edit
+      flash[:sucess] = "Profile updated"
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
   private # Stuff under this are used internally by this controller and need not be exposed to external users via the web.
     def user_params
       params.require(:user).permit(:email,
@@ -25,6 +46,22 @@ class UsersController < ApplicationController
                                    :last_name,
                                    :password,
                                    :password_confirmation)
+    end
+
+  # Before filters:
+    # Confirm a user's logged in
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+
+    # Cofirms the right user
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
     end
 
 end

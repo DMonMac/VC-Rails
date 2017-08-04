@@ -1,0 +1,14 @@
+<h1>All Users</h1>
+
+<ul>
+  <!-- The setup I get:
+  <% @users.each do |user| %>
+  <%= render user %> -> This calls for the variable 'user' of class 'User'
+  <%end%> -->
+
+  <!-- The clean setup -->
+  <ul class="users">
+    <%= render @users %> <!-- @users is a list of User objects -->
+  </ul>
+
+</ul>

@@ -18,6 +18,7 @@ class User < ApplicationRecord
   # PASSWORD CONDITIONS
     has_secure_password
     validates :password, presence: true,
-                         length: { minimum: 8 }
+                         length: { minimum: 8 },
+                         allow_nil: true # Leaving the password blank will edit everything else without changing the password. 'has_secure_password' ensures that blank passwords are not accepted as password edits.
 
 end

@@ -55,3 +55,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Creates a password digest [or hashed password]
 gem 'bcrypt',         '3.1.11'
+
+# Makes multiple fake accounts
+gem 'faker',          '1.7.3'
+
+# Adds pagination
+gem 'will_paginate',           '3.1.5'
+gem 'bootstrap-will_paginate', '1.0.0'

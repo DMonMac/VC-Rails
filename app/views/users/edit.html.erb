@@ -1,0 +1,38 @@
+<h1>Edit Profile</h1>
+
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages'%>
+
+      <%= f.label :email %>
+      <br>
+      <%= f.email_field :email %>
+      <br>
+
+      <%= f.label :first_name %>
+      <br>
+      <%= f.text_field :first_name %>
+      <br>
+
+      <%= f.label :last_name %>
+      <br>
+      <%= f.text_field :last_name %>
+      <br>
+
+      <div class="field">
+        <label for="user_password">Password</label>
+        <em>(8 characters minimum. Leave blank to keep old password.)</em>
+        <br>
+        <input autocomplete="off" type="password" name="user[password]" id="user_password">
+      </div>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <br>
+      <%= f.password_field :password_confirmation %>
+      <br>
+      <br>
+
+      <%= f.submit "Save" %>
+      <br>
+<% end %>
+
+<p>Find me in app/views/users/new.html.erb</p>
