@@ -9,7 +9,9 @@
 <%= @user.updated_at %>
 <br>
 
-
+<% if current_user.admin? && !current_user?(@user)%>
+  <%= link_to "Delete", @user, method: :delete, data: { confirm: "You sure?"} %>
+<% end %>
 <p>
   <%= Time.now %>
   <br>
