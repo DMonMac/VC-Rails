@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :relationships, only: [:create, :destroy]
+
+  resources :users do
+    member do
+      get :following, :followers # gives a GET path for the 2 there
+    end
+  end
+
   resources :homes
 
   # Sessions use cookies to remember user data while logged in and forgets it when logged out.

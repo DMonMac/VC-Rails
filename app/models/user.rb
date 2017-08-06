@@ -1,6 +1,19 @@
 class User < ApplicationRecord
   has_many :homes, dependent: :destroy
 
+  # Rails can't infer these automatically, so it needs to be stated. The 'foreign_key' serves like the link for the Relationship and User models.
+  has_many :active_relationships, class_name: "Relationship",
+                                  foreign_key: "follower_id",
+                                  dependent: :destroy
+
+  has_many :passive_relationships, class_name: "Relationship",
+                                   foreign_key: "followed_id",
+                                   dependent: :destroy
+
+  # 'source' tells Rails that the source of the following array is the set of followed ids
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships # 'source' here is not needed coz by default, Rails will singularize “followers” and automatically look for the foreign key follower_id
+
   before_save { self.email = email.downcase }
 
   # NAME CONDITIONS
@@ -29,6 +42,19 @@ class User < ApplicationRecord
       Home.where("user_id = ?", id)
     end
 
+    # Follows a user.
+    def follow(other_user)
+      following << other_user # the shovel operator << appends to the end of an array
+    end
 
+    # Unfollows a user.
+    def unfollow(other_user)
+      following.delete(other_user)
+    end
+
+     # Returns true if the current user is following the other user.
+    def following?(other_user)
+      following.include?(other_user) # 'include?' checks if 'other_user' is already part of the following array.
+    end
 
 end

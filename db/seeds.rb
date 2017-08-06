@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Users
 User.create!(first_name: "D",
              last_name: "Mac",
              email: "dmac@email.com",
@@ -13,7 +14,7 @@ User.create!(first_name: "D",
              password_confirmation: "thisis@test",
              admin: true)
 
-5.times do |n|
+10.times do |n|
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
   email = "tester_#{n+1}@email.com"
@@ -25,6 +26,7 @@ User.create!(first_name: "D",
                password_confirmation: password)
 end
 
+# Rooms
 users = User.order(:created_at)
 3.times do
   name = Faker::Address.secondary_address
@@ -36,6 +38,12 @@ users = User.order(:created_at)
                                          description: description,
                                          price: price)
              }
-
-
 end
+
+# Relationsships
+users = User.all
+user = users.first
+following = users[2..5]
+followers = users[4..8]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
