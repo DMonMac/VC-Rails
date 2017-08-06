@@ -13,8 +13,7 @@ User.create!(first_name: "D",
              password_confirmation: "thisis@test",
              admin: true)
 
-
-100.times do |n|
+5.times do |n|
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
   email = "tester_#{n+1}@email.com"
@@ -24,4 +23,19 @@ User.create!(first_name: "D",
                email: email,
                password:              password,
                password_confirmation: password)
+end
+
+users = User.order(:created_at)
+3.times do
+  name = Faker::Address.secondary_address
+  location = Faker::Address.city
+  description = Faker::Lorem.sentence(5)
+  price = Faker::Number.decimal(2)
+  users.each { |user| user.homes.create!(name: name,
+                                         location: location,
+                                         description: description,
+                                         price: price)
+             }
+
+
 end

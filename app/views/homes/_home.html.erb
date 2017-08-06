@@ -1,0 +1,42 @@
+<li id="home-<%= home.id %>">
+  <span >
+    Name:<br>
+    <%= link_to home.name, home %> (<%= "h#{home.id}" %>)<br><br>
+  </span>
+  <span>
+    <%= image_tag home.picture.url if home.picture? %>
+    <br><br>
+  </span>
+  <span>
+    Location:<br>
+    <%= home.location %>
+  </span>
+  <br><br>
+  <span>
+    Description:<br>
+    <%= home.description %>
+  </span>
+  <br><br>
+  <span>
+    Price<br>
+    <%= home.price %>
+  </span>
+  <br><br>
+  <% if !current_user?(home.user) %>
+  <span>
+    Host:<br>
+    <%= link_to "#{home.user.first_name} #{home.user.last_name}", home.user %>
+  </span>
+  <% end %>
+  <br><br>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(home.created_at) %> ago.
+  </span>
+  <br><br>
+
+  <% if current_user?(home.user) %>
+    <%=
+      link_to "Delete Home", home, method: :delete, data: { confirm: "You are about to delete #{home.name}. Are you sure?"}
+    %>
+  <% end %>
+</li>

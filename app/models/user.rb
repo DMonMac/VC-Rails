@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :homes, dependent: :destroy
+
   before_save { self.email = email.downcase }
 
   # NAME CONDITIONS
@@ -20,5 +22,13 @@ class User < ApplicationRecord
     validates :password, presence: true,
                          length: { minimum: 8 },
                          allow_nil: true # Leaving the password blank will edit everything else without changing the password. 'has_secure_password' ensures that blank passwords are not accepted as password edits.
+
+  # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+    def feed
+      Home.where("user_id = ?", id)
+    end
+
+
 
 end

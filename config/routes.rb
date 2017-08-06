@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :homes
+
   # Sessions use cookies to remember user data while logged in and forgets it when logged out.
   delete '/logout', to: 'sessions#destroy'
   post '/login', to: 'sessions#create'

@@ -1,7 +1,4 @@
-<h1>User Profile</h1>
-
-<%= @user.first_name %> <%= @user.last_name %>
-<br>
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
 <%= @user.email %>
 <br>
 <%= @user.created_at %>
@@ -9,9 +6,33 @@
 <%= @user.updated_at %>
 <br>
 
-<% if current_user.admin? && !current_user?(@user)%>
-  <%= link_to "Delete", @user, method: :delete, data: { confirm: "You sure?"} %>
+<% if @user.homes.any? %>
+  <h3>Homes (<%= @user.homes.count %>)</h3>
+  <ol class="homes">
+    <%= render @homes %>
+  </ol>
 <% end %>
+
+<br>
+
+<% if logged_in? %>
+    <h3>Home Feed</h3>
+     <%= render 'shared/feed' %>
+    <br>
+
+    <% if current_user?(@user) %>
+      <%= link_to "Add Home", new_home_path %>
+    <% end %>
+
+    <% if current_user.admin? && !current_user?(@user)%>
+      <%= link_to "Delete User", @user, method: :delete, data: { confirm: "You sure?"} %>
+    <% end %>
+
+<% else %>
+<% end %>
+
+
+
 <p>
   <%= Time.now %>
   <br>
