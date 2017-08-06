@@ -22,10 +22,10 @@
 
 <% if logged_in? %>
     <%= render 'follow_form' %>
-    <h3>Home Feed</h3>
+<!--    <h3>Home Feed</h3>
      <%= render 'shared/feed' %>
     <br>
-
+-->
     <% if current_user?(@user) %>
       <%= link_to "Add Home", new_home_path %>
     <% end %>

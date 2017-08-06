@@ -2,9 +2,9 @@ class User < ApplicationRecord
   has_many :homes, dependent: :destroy
 
   # Rails can't infer these automatically, so it needs to be stated. The 'foreign_key' serves like the link for the Relationship and User models.
-  has_many :active_relationships, class_name: "Relationship",
+  has_many :active_relationships, class_name:  "Relationship",
                                   foreign_key: "follower_id",
-                                  dependent: :destroy
+                                  dependent:   :destroy
 
   has_many :passive_relationships, class_name: "Relationship",
                                    foreign_key: "followed_id",
@@ -37,10 +37,13 @@ class User < ApplicationRecord
                          allow_nil: true # Leaving the password blank will edit everything else without changing the password. 'has_secure_password' ensures that blank passwords are not accepted as password edits.
 
   # Defines a proto-feed.
-  # See "Following users" for the full implementation.
-    def feed
-      Home.where("user_id = ?", id)
-    end
+  # Returns a user's status feed.
+  def feed
+    following_ids = "SELECT followed_id FROM relationships
+                     WHERE  follower_id = :user_id"
+    Home.where("user_id IN (#{following_ids})
+                     OR user_id = :user_id", user_id: id)
+   end
 
     # Follows a user.
     def follow(other_user)
