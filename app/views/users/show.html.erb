@@ -6,6 +6,11 @@
 <%= @user.updated_at %>
 <br>
 
+<section class="stats">
+  <%= render 'shared/stats' %>
+</section>
+
+
 <% if @user.homes.any? %>
   <h3>Homes (<%= @user.homes.count %>)</h3>
   <ol class="homes">
@@ -16,16 +21,17 @@
 <br>
 
 <% if logged_in? %>
-    <h3>Home Feed</h3>
+    <%= render 'follow_form' %>
+<!--    <h3>Home Feed</h3>
      <%= render 'shared/feed' %>
     <br>
-
+-->
     <% if current_user?(@user) %>
       <%= link_to "Add Home", new_home_path %>
     <% end %>
 
     <% if current_user.admin? && !current_user?(@user)%>
-      <%= link_to "Delete User", @user, method: :delete, data: { confirm: "You sure?"} %>
+      <%= link_to "Delete #{@user.first_name} #{@user.last_name}'s account", @user, method: :delete, data: { confirm: "You sure?"} %>
     <% end %>
 
 <% else %>
