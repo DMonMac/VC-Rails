@@ -1,4 +1,4 @@
-<li id="home-<%= home.id %>">
+<div id="home-<%= @home.id %>">
 
   <span >
     <h1><%= "#{@home.name} (h#{(@home.id)})" %></h1>
@@ -37,4 +37,4 @@
       link_to "Delete Home", @home, method: :delete, data: { confirm: "You are about to delete #{@home.name}. Are you sure?"}
     %>
   <% end %>
-</li>
+</div>
