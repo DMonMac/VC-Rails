@@ -1,6 +1,6 @@
 class HomesController < ApplicationController
   before_action :logged_in_user, only: [:new, :create, :edit, :update, :destroy]
-  before_action :correct_user, only: :destroy
+  before_action :correct_user, only: [:new, :create, :edit, :update, :destroy]
 
   def new
     if logged_in?
@@ -31,6 +31,13 @@ class HomesController < ApplicationController
   end
 
   def update
+    if @home.update_attributes(home_params)
+      # Action after successful edit
+      flash[:sucess] = "Home updated"
+      redirect_to @home
+    else
+      render 'edit'
+    end
   end
 
   def destroy

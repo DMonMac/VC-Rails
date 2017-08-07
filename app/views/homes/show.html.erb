@@ -33,6 +33,8 @@
   <br><br>
 
   <% if current_user?(@home.user) %>
+  <%= link_to "Edit Home", edit_home_path(@home) %>
+
     <%=
       link_to "Delete Home", @home, method: :delete, data: { confirm: "You are about to delete #{@home.name}. Are you sure?"}
     %>
