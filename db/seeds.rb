@@ -34,7 +34,6 @@ users = User.order(:created_at)
   description = Faker::Lorem.sentence(5)
   price = Faker::Number.decimal(2)
   users.each { |user| user.homes.create!(name: name,
-                                         location: location,
                                          description: description,
                                          price: price)
              }

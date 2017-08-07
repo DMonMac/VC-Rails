@@ -51,14 +51,13 @@ class HomesController < ApplicationController
 
   def home_params
     params.require(:home).permit(:name,
-                                 :location,
                                  :description,
                                  :price,
                                  :picture)
   end
 
   def correct_user
-    @home = current_user.homes.find_by(id: params[:id])
+    @home = current_user.homes.find_by(params[:id])
     redirect_to user_url if @home.nil?
   end
 
