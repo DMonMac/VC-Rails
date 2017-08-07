@@ -9,6 +9,7 @@ class HomesController < ApplicationController
   end
 
   def index
+    @homes = Home.all
   end
 
   def show
