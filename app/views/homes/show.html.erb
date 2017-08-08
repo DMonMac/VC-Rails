@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<p><%= image_tag @home.home_picture.url if @home.home_picture? %></p>
+
 <p>
   <strong>Name:</strong>
   <%= @home.name %>
@@ -21,4 +23,5 @@
 </p>
 
 <%= link_to 'Edit', edit_home_path(@home) %> |
+<%= link_to 'Destroy', @home, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', homes_path %>

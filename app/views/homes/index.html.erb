@@ -16,6 +16,7 @@
   <tbody>
     <% @homes.each do |home| %>
       <tr>
+        <td><%= image_tag home.home_picture.url(:thumb) if home.home_picture? %></td>
         <td><%= home.name %></td>
         <td><%= home.address %></td>
         <td><%= home.description %></td>
