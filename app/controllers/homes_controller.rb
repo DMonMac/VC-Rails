@@ -51,17 +51,25 @@ class HomesController < ApplicationController
 
   def home_params
     params.require(:home).permit(:name,
+<<<<<<< HEAD
                                  :address,
                                  :latitude,
                                  :longitude,
+=======
+>>>>>>> 245a9ea33d4eba2973ff91cfe4007b86fe4a7a7d
                                  :description,
                                  :price,
                                  :picture)
   end
 
   def correct_user
+<<<<<<< HEAD
     @home = current_user.homes.find_by(id: params[:id])
     redirect_to home_url if @home.nil?
+=======
+    @home = current_user.homes.find_by(params[:id])
+    redirect_to user_url if @home.nil?
+>>>>>>> 245a9ea33d4eba2973ff91cfe4007b86fe4a7a7d
   end
 
 end

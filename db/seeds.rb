@@ -27,6 +27,7 @@ User.create!(first_name: "D",
 end
 
 # Rooms
+<<<<<<< HEAD
 # users = User.order(:created_at)
 # 3.times do
 #  name = Faker::Address.secondary_address
@@ -38,6 +39,19 @@ end
 #                                         price: price)
 #             }
 # end
+=======
+users = User.order(:created_at)
+3.times do
+  name = Faker::Address.secondary_address
+  location = Faker::Address.city
+  description = Faker::Lorem.sentence(5)
+  price = Faker::Number.decimal(2)
+  users.each { |user| user.homes.create!(name: name,
+                                         description: description,
+                                         price: price)
+             }
+end
+>>>>>>> 245a9ea33d4eba2973ff91cfe4007b86fe4a7a7d
 
 # Relationsships
 users = User.all
