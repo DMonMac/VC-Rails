@@ -8,11 +8,6 @@
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @home.address %>
-</p>
-
-<p>
   <strong>Description:</strong>
   <%= @home.description %>
 </p>
@@ -25,3 +20,33 @@
 <%= link_to 'Edit', edit_home_path(@home) %> |
 <%= link_to 'Destroy', @home, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', homes_path %>
+
+
+<ul>
+<% for home in @home.nearbys(10) %>
+  <li><%= link_to home.address, home %> (<%= home.distance.round(2) %> miles)</li>
+<% end %>
+</ul>
+<% "Homes" %>
+
+<p>
+  <strong>Address:</strong>
+  <%= @home.address %>
+</p>
+<p>
+  <strong>Latitude:</strong>
+  <%= @home.latitude %>
+</p>
+<p>
+  <strong>Longitude:</strong>
+  <%= @home.longitude %>
+</p>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@home.latitude}%2C#{@home.longitude}" %>
+
+<h3>Nearby homes</h3>
+<ul>
+<% for home in @home.nearbys(10) %>
+  <li><%= link_to home.address, home %> (<%= home.distance.round(2) %> miles)</li>
+<% end %>
+</ul>

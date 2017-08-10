@@ -1,10 +1,15 @@
 class HomesController < ApplicationController
   before_action :set_home, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+
   # GET /homes
   # GET /homes.json
   def index
-    @homes = Home.all
+    if params[:search].present?
+      @homes = Home.near(params[:search], 50, :order => :distance)
+    else
+      @homes = Home.all
+    end
   end
 
   # GET /homes/1
