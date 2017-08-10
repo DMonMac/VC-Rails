@@ -1,6 +1,6 @@
 class HomesController < ApplicationController
-  before_action :logged_in_user, only: [:new, :create, :edit, :update, :destroy]
-  before_action :correct_user, only: [:new, :create, :edit, :update, :destroy]
+  before_action :logged_in_user, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def new
     if logged_in?
@@ -51,7 +51,9 @@ class HomesController < ApplicationController
 
   def home_params
     params.require(:home).permit(:name,
-                                 :location,
+                                 :address,
+                                 :latitude,
+                                 :longitude,
                                  :description,
                                  :price,
                                  :picture)
@@ -59,7 +61,7 @@ class HomesController < ApplicationController
 
   def correct_user
     @home = current_user.homes.find_by(id: params[:id])
-    redirect_to user_url if @home.nil?
+    redirect_to home_url if @home.nil?
   end
 
 end

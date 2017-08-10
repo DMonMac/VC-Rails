@@ -4,7 +4,7 @@ class Home < ApplicationRecord
   validates :user_id, presence: true
 
   validates :name, presence: true, length: {maximum: 140}
-  validates :location, presence: true, length: {maximum: 140}
+  validates :address, presence: true
   validates :description, presence: true, length: {maximum: 140}
   validates :price, presence: true
   mount_uploader :picture, PictureUploader
