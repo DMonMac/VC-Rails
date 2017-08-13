@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tourguides, only: [:index, :show]
+
   devise_for :tourguides, controllers: {
         registrations: 'tourguides/registrations'
       },
