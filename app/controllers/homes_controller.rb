@@ -5,7 +5,7 @@ class HomesController < ApplicationController
   # GET /homes.json
   def index
     if params[:search].present?
-      @homes = Home.near(params[:search], 50, :order => :distance)
+      @homes = Home.near(params[:search], 50)
     else
       @homes = Home.all
     end
@@ -73,7 +73,7 @@ class HomesController < ApplicationController
     def set_home
       @home = current_user.homes.find_by(id: params[:id])
       if @home.nil?
-      redirect_to homes_url, notice: 'Only the owner can edit this.'
+      redirect_to homes_url, notice: 'Only the owner can do this.'
       end
     end
 
