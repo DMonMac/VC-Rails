@@ -8,5 +8,6 @@ class CreateHomes < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    add_index :homes, [:user_id, :created_at, :updated_at]
   end
 end

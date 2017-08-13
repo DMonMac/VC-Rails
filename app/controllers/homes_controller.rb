@@ -1,10 +1,15 @@
 class HomesController < ApplicationController
   before_action :set_home, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+
   # GET /homes
   # GET /homes.json
   def index
-    @homes = Home.all
+    if params[:search].present?
+      @homes = Home.near(params[:search], 50, :order => :distance)
+    else
+      @homes = Home.all
+    end
   end
 
   # GET /homes/1
@@ -14,7 +19,9 @@ class HomesController < ApplicationController
 
   # GET /homes/new
   def new
-    @home = Home.new
+    if user_signed_in?
+      @home = current_user.homes.build
+    end
   end
 
   # GET /homes/1/edit
@@ -24,7 +31,7 @@ class HomesController < ApplicationController
   # POST /homes
   # POST /homes.json
   def create
-    @home = Home.new(home_params)
+    @home = current_user.homes.build(home_params)
 
     respond_to do |format|
       if @home.save
@@ -69,6 +76,11 @@ class HomesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def home_params
-      params.require(:home).permit(:name, :address, :description, :price, :home_picture)
+      params.require(:home).permit(:name, :address, :latitude, :longitude, :description, :price, :home_picture)
+    end
+
+    def correct_user
+      @home = current_user.homes.find_by(id: params[:id])
+      redirect_to homes_url if @home.nil?
     end
 end
