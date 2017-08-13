@@ -30,7 +30,12 @@
       <%= f.password_field :password_confirmation %>
       <br>
       <br>
-
+      <%= f.file_field :avatar %>
+      <br>
+      <%= f.label :remote_avatar_url, "or image URL" %><br />
+      <%= f.text_field :remote_avatar_url %>
+      <br>
+      <br>
       <%= f.submit "Create my account" %>
       <br>
 <% end %>

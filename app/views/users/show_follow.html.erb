@@ -1,6 +1,7 @@
 <% provide(:title, @title) %>
 <div>
   <h1><%= "#{@user.first_name} #{@user.last_name}" %></h1>
+  <%= image_tag @user.avatar.url if @user.avatar? %>
   <span><%= link_to "Back to Profile", @user %></span>
   <br><br>
   <h3><%= @title %></h3>

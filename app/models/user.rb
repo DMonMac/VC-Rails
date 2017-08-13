@@ -36,6 +36,8 @@ class User < ApplicationRecord
                          length: { minimum: 8 },
                          allow_nil: true # Leaving the password blank will edit everything else without changing the password. 'has_secure_password' ensures that blank passwords are not accepted as password edits.
 
+  mount_uploader :avatar, AvatarUploader
+
   # Defines a proto-feed.
   # Returns a user's status feed.
   def feed

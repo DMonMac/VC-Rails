@@ -1,11 +1,13 @@
 <%= link_to "Logo", root_path %>
+<%= link_to  "Users", users_path %>
 
 <% if logged_in? %>
-    <%= link_to  "Users", users_path %>
+    Logged in as <%= image_tag current_user.avatar.url(:thumb) if current_user.avatar? %><strong><%= "#{current_user.first_name} #{current_user.last_name}" %></strong>.
     <%= link_to "Profile", current_user %> <!-- or user_path(current_user) -->
     <%= link_to  "Settings", edit_user_path(current_user) %>
     <%= link_to  "Log Out", logout_path, method: :delete %>
 <% else %>
+
     <%= link_to "Sign Up", signup_path %>
     <%= link_to "Log In", login_path %>
 <% end %>

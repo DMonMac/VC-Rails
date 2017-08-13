@@ -4,7 +4,7 @@ class Home < ApplicationRecord
   validates :user_id, presence: true
 
   validates :name, presence: true, length: {maximum: 140}
-  validates :location, presence: true, length: {maximum: 140}
+  validates :address, presence: true
   validates :description, presence: true, length: {maximum: 140}
   validates :price, presence: true
   mount_uploader :picture, PictureUploader
@@ -18,5 +18,9 @@ class Home < ApplicationRecord
       errors.add(:picture, "should be less than 5 MB")
     end
   end
+
+  # Geocoder config
+  geocoded_by :address
+  after_validation :geocode, :if => :address_changed?
 
 end

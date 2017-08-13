@@ -7,11 +7,32 @@
     <%= image_tag @home.picture.url if @home.picture? %>
     <br><br>
   </span>
-  <span>
-    Location:<br>
-    <%= @home.location %>
-  </span>
-  <br><br>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @home.address %>
+  </p>
+  <p>
+    <strong>Latitude:</strong>
+    <%= @home.latitude %>
+  </p>
+  <p>
+    <strong>Longitude:</strong>
+    <%= @home.longitude %>
+  </p>
+
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@home.latitude}%2C#{@home.longitude}" %>
+
+  <h3>Nearby Homes</h3>
+  <ul>
+  <% for home in @home.nearbys(10) %>
+    <li><%= link_to home.address, home %> (<%= home.distance.round(2) %> miles)</li>
+  <% end %>
+  </ul>
+
+
+
+
   <span>
     Description:<br>
     <%= @home.description %>
@@ -40,4 +61,7 @@
       link_to "Delete Home", @home, method: :delete, data: { confirm: "You are about to delete #{@home.name}. Are you sure?"}
     %>
   <% end %>
+
+  <%= link_to "View All Homes", homes_path %>
+
 </div>
