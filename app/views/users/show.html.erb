@@ -1,0 +1,8 @@
+<h1><%=@user.first_name %> <%=@user.last_name %></h1>
+<h3>Homes (<%= @user.homes.count %>)</h3>
+<ol>
+  <% @homes.each do |home| %>
+    <li><%= link_to "#{home.name}", home %> <br></li>
+  <% end %>
+</ol>
+<p>Find me in app/views/users/show.html.erb</p>
