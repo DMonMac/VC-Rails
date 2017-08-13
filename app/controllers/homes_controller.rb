@@ -1,7 +1,6 @@
 class HomesController < ApplicationController
-  before_action :set_home, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-
+  before_action :set_home, only: [:edit, :update, :destroy]
   # GET /homes
   # GET /homes.json
   def index
@@ -15,6 +14,7 @@ class HomesController < ApplicationController
   # GET /homes/1
   # GET /homes/1.json
   def show
+    @home = Home.find(params[:id])
   end
 
   # GET /homes/new
@@ -71,16 +71,21 @@ class HomesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_home
-      @home = Home.find(params[:id])
+      @home = current_user.homes.find_by(id: params[:id])
+      if @home.nil?
+      redirect_to homes_url, notice: 'Only the owner can edit this.'
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def home_params
-      params.require(:home).permit(:name, :address, :latitude, :longitude, :description, :price, :home_picture)
+      params.require(:home).permit(:name,
+                                   :address,
+                                   :latitude,
+                                   :longitude,
+                                   :description,
+                                   :price,
+                                   :home_picture)
     end
 
-    def correct_user
-      @home = current_user.homes.find_by(id: params[:id])
-      redirect_to homes_url if @home.nil?
-    end
 end

@@ -8,6 +8,11 @@
 </p>
 
 <p>
+  <strong>Host:</strong>
+  <%= @home.user.first_name %> <%= @home.user.last_name %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @home.description %>
 </p>
@@ -17,16 +22,11 @@
   <%= @home.price %>
 </p>
 
-<%= link_to 'Edit', edit_home_path(@home) %> |
-<%= link_to 'Destroy', @home, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Back', homes_path %>
-
-<% "Homes" %>
-
 <p>
   <strong>Address:</strong>
   <%= @home.address %>
 </p>
+
 <p>
   <strong>Latitude:</strong>
   <%= @home.latitude %>
@@ -44,3 +44,9 @@
   <li><%= link_to home.address, home %> (<%= home.distance.round(2) %> miles)</li>
 <% end %>
 </ul>
+
+<% if user_signed_in? && current_user.id == @home.user.id %>
+<%= link_to 'Edit', edit_home_path(@home) %> |
+<%= link_to 'Destroy', @home, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %>
+<%= link_to 'Back', homes_path %>
