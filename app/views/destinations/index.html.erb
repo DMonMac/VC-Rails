@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Destinations</h1>
+<h1>Tourist Spots</h1>
+
+<%= form_tag destinations_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search Near", :name => nil %>
+<% end %>
 
 <table>
   <thead>
@@ -15,10 +21,9 @@
   <tbody>
     <% @destinations.each do |destination| %>
       <tr>
-        <td><%= destination.d_name %></td>
+        <td><%= link_to destination.d_name, destination %></td>
         <td><%= destination.d_description %></td>
         <td><%= destination.tourguide.tg_first_name %> <%= destination.tourguide.tg_last_name %></td>
-        <td><%= link_to 'Show', destination %></td>
         <% if tourguide_signed_in? && current_tourguide.id == destination.tourguide.id %>
           <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
           <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>

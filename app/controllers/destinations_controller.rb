@@ -5,7 +5,11 @@ class DestinationsController < ApplicationController
   # GET /destinations
   # GET /destinations.json
   def index
-    @destinations = Destination.all
+    if params[:search].present?
+      @destinations = Destination.near(params[:search], 25, :units => :km)
+    else
+      @destinations = Destination.all
+    end
   end
 
   # GET /destinations/1
@@ -76,6 +80,7 @@ class DestinationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def destination_params
-      params.require(:destination).permit(:d_name, :d_description, :tourguide_id)
+      params.require(:destination).permit(:d_name, :d_description, :tourguide_id, :street, :city, :zip_code, :country, :latitude, :longitude)
     end
+
 end

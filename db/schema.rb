@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170814080733) do
+ActiveRecord::Schema.define(version: 20170814202912) do
 
   create_table "destinations", force: :cascade do |t|
     t.string "d_name"
@@ -18,6 +18,12 @@ ActiveRecord::Schema.define(version: 20170814080733) do
     t.integer "tourguide_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "street"
+    t.string "city"
+    t.string "zip_code"
+    t.string "country"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["created_at", "updated_at"], name: "index_destinations_on_created_at_and_updated_at"
     t.index ["tourguide_id"], name: "index_destinations_on_tourguide_id"
   end
