@@ -4,5 +4,14 @@
 <h3>Hourly Rate:</h3>
 <%= number_to_currency(@tourguide.tg_rate, unit: '₱') %>
 
+<h3>Contact:</h3>
+<strong>E-mail:</strong> <%= @tourguide.email %><br>
+<strong>Phone: </strong> <%= number_to_phone(@tourguide.tg_phone) %>
 
+<h3>Tourist Spots (<%= @tourguide.destinations.count %>)</h3>
+<ol>
+  <% @destinations.each do |destination| %>
+    <li><%= link_to "#{destination.d_name}", destination %> <br></li>
+  <% end %>
+</ol>
 <p>Find me in app/views/tourguides/show.html.erb</p>

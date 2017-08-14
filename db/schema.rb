@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170813202615) do
+ActiveRecord::Schema.define(version: 20170814080733) do
+
+  create_table "destinations", force: :cascade do |t|
+    t.string "d_name"
+    t.string "d_description"
+    t.integer "tourguide_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at", "updated_at"], name: "index_destinations_on_created_at_and_updated_at"
+    t.index ["tourguide_id"], name: "index_destinations_on_tourguide_id"
+  end
 
   create_table "tourguides", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170813202615) do
     t.string "tg_first_name"
     t.string "tg_last_name"
     t.decimal "tg_rate", precision: 8, scale: 2
+    t.string "tg_phone"
     t.string "tg_avatar"
     t.index ["email"], name: "index_tourguides_on_email", unique: true
     t.index ["reset_password_token"], name: "index_tourguides_on_reset_password_token", unique: true

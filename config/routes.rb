@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :destinations
   resources :tourguides, only: [:index, :show]
 
   devise_for :tourguides, controllers: {

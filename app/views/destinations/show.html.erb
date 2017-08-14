@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tourist Spot:</strong>
+  <%= @destination.d_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @destination.d_description %>
+</p>
+
+<p>
+  <strong>Taxi Tour Guide:</strong>
+  <%= @destination.tourguide.tg_first_name %> <%= @destination.tourguide.tg_last_name %>
+</p>
+
+<% if tourguide_signed_in? && current_tourguide.id == @destination.tourguide.id %>
+  <%= link_to 'Edit', edit_destination_path(@destination) %> |
+  <%= link_to 'Destroy', @destination, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %>
+<%= link_to 'Back', destinations_path %>

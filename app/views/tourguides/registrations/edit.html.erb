@@ -12,6 +12,11 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
+  <div class="field"><br />
+    <%= f.label :tg_phone, "Phone Number" %><br />
+    <%= f.telephone_field :tg_phone %>
+  </div>
+
   <div class="field">
     <%= f.label :tg_first_name, "First Name" %><br />
     <%= f.text_field :tg_first_name %>
@@ -42,17 +47,18 @@
   </div>
 
   <div class="field">
-    <%= f.file_field :tg_avatar %>
+    <%= f.label :tg_avatar, "Avatar" %><br />
+    <%= f.file_field :tg_avatar %><br />
   </div>
 
   <div class="field">
     <%= f.label :remote_tg_avatar_url, "or image URL" %>
-    <%= f.text_field :remote_tg_avatar_url %>
+    <%= f.text_field :remote_tg_avatar_url %><br />
   </div>
 
   <div class="field">
     <%= f.label :tg_rate, "Hourly Rate (PhP)" %>
-    <%= f.number_field :tg_rate, :placeholder => "0.00", value: number_to_currency(f.object.tg_rate, unit: '₱') %>
+    <%= f.number_field :tg_rate, :placeholder => "0.00", value: number_to_currency(f.object.tg_rate, unit: '₱') %><br />
   </div>
 
   <div class="actions">
