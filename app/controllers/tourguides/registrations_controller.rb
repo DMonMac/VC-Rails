@@ -41,12 +41,12 @@ class Tourguides::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
    def configure_sign_up_params
-     devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :tg_first_name, :tg_last_name, :tg_avatar, :remote_tg_avatar_url])
+     devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :tg_first_name, :tg_last_name, :tg_avatar, :remote_tg_avatar_url, :tg_rate])
    end
 
   # If you have extra params to permit, append them to the sanitizer.
    def configure_account_update_params
-     devise_parameter_sanitizer.permit(:account_update, keys: [:attribute, :tg_first_name, :tg_last_name, :tg_avatar, :remote_tg_avatar_url])
+     devise_parameter_sanitizer.permit(:account_update, keys: [:attribute, :tg_first_name, :tg_last_name, :tg_avatar, :remote_tg_avatar_url, :tg_rate])
    end
 
   # The path used after sign up.

@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20170813202615) do
     t.datetime "updated_at", null: false
     t.string "tg_first_name"
     t.string "tg_last_name"
+    t.decimal "tg_rate", precision: 8, scale: 2
     t.string "tg_avatar"
     t.index ["email"], name: "index_tourguides_on_email", unique: true
     t.index ["reset_password_token"], name: "index_tourguides_on_reset_password_token", unique: true

@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2>Be A Taxi Tour Guide</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -39,6 +39,12 @@
     <%= f.label :remote_tg_avatar_url, "or image URL" %>
     <%= f.text_field :remote_tg_avatar_url %>
   </div>
+
+  <div class="field">
+    <%= f.label :tg_rate, "Hourly Rate (PhP)" %>
+    <%= f.number_field :tg_rate, :placeholder => "0.00", value: number_to_currency(f.object.tg_rate, unit: '₱') %>
+  </div>
+
 
   <div class="actions">
     <%= f.submit "Sign up" %>
