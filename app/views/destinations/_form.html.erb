@@ -12,12 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :d_name %>
+    <%= form.label :d_name, "Tourist Spot" %>
     <%= form.text_field :d_name, id: :destination_d_name %>
   </div>
 
   <div class="field">
-    <%= form.label :d_description %>
+    <%= form.label :street, "Street" %>
+    <%= form.text_field :street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip_code %>
+    <%= form.text_field :zip_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :d_description, "Description" %>
     <%= form.text_field :d_description, id: :destination_d_description %>
   </div>
 

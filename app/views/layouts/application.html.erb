@@ -17,9 +17,16 @@
          Logged in as <%= image_tag current_tourguide.tg_avatar.url(:thumb) if current_tourguide.tg_avatar? %><strong><%= link_to "#{current_tourguide.tg_first_name} #{current_tourguide.tg_last_name}", current_tourguide %></strong>.
          <%= link_to 'Edit profile', edit_tourguide_registration_path, :class => 'navbar-link' %> |
          <%= link_to "Logout", destroy_tourguide_session_path, method: :delete, :class => 'navbar-link'  %>
+       <% elsif tourist_signed_in? %>
+         Logged in as <strong><%= link_to "#{current_tourist.email}", root_path %></strong>.
+         <%= link_to 'Edit profile', edit_tourist_registration_path, :class => 'navbar-link' %> |
+         <%= link_to "Logout", destroy_tourist_session_path, method: :delete, :class => 'navbar-link'  %>
        <% else %>
+         <%= link_to "Be a Tourist", new_tourist_registration_path, :class => 'navbar-link'  %> |
+         <%= link_to "Tourist Log In", new_tourist_session_path, :class => 'navbar-link'  %>
+
          <%= link_to "Be a Taxi Tour Guide", new_tourguide_registration_path, :class => 'navbar-link'  %> |
-         <%= link_to "Already a driver? Log In", new_tourguide_session_path, :class => 'navbar-link'  %>
+         <%= link_to "Taxi Tour Guide Log In", new_tourguide_session_path, :class => 'navbar-link'  %>
        <% end %>
     <%= yield %>
   </body>

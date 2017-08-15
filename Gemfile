@@ -58,5 +58,11 @@ gem 'devise'
 
 #Image upload
 gem 'carrierwave'
-gem 'mini_magick'             
+gem 'mini_magick'
 gem 'fog'
+
+# Location 'finder'
+gem 'geocoder'
+
+# Custom scaffold generator
+gem 'nifty-generators'

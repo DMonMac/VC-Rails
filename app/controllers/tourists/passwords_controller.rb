@@ -1,4 +1,4 @@
-class Tourguides::PasswordsController < Devise::PasswordsController
+class Tourists::PasswordsController < Devise::PasswordsController
   include Accessible
   # GET /resource/password/new
   # def new
