@@ -5,6 +5,11 @@
   <%= @destination.d_name %>
 </p>
 
+<%= image_tag @destination.d_pic.url if @destination.d_pic? %>
+
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@destination.latitude}%2C#{@destination.longitude}" %>
+
 <p>
   <strong>Description:</strong>
   <%= @destination.d_description %>
@@ -15,8 +20,17 @@
   <%= @destination.tourguide.tg_first_name %> <%= @destination.tourguide.tg_last_name %>
 </p>
 
+<h3>Nearby Tourist Spots in <%= @destination.tourguide.tg_first_name %> <%= @destination.tourguide.tg_last_name %>'s Itenerary</h3>
+<ul>
+  <% for destination in @destination.nearbys(2, :units => :km) %>
+    <% if @destination.tourguide_id == destination.tourguide_id %>
+      <li><%= link_to destination.d_name, destination %> (<%= destination.distance.round(2) %> km)</li>
+      <% end %>
+  <% end %>
+</ul>
+
 <% if tourguide_signed_in? && current_tourguide.id == @destination.tourguide.id %>
   <%= link_to 'Edit', edit_destination_path(@destination) %> |
   <%= link_to 'Destroy', @destination, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <% end %>
-<%= link_to 'Back', destinations_path %>
+<%= link_to 'View all Tourist Spots', destinations_path %>

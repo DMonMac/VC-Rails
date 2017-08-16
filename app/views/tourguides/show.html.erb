@@ -5,8 +5,12 @@
 <%= number_to_currency(@tourguide.tg_rate, unit: '₱') %>
 
 <h3>Contact:</h3>
+<% if user_signed_in? || tourguide_signed_in? %>
 <strong>E-mail:</strong> <%= @tourguide.email %><br>
 <strong>Phone: </strong> <%= number_to_phone(@tourguide.tg_phone) %>
+<% else %>
+<p>Please Sign In to view Contact Info</p>
+<% end %>
 
 <h3>Tourist Spots (<%= @tourguide.destinations.count %>)</h3>
 <ol>
@@ -14,4 +18,8 @@
     <li><%= link_to "#{destination.d_name}", destination %> <br></li>
   <% end %>
 </ol>
+<% if tourguide_signed_in? && current_tourguide.id == @tourguide.id %>
+<%= link_to "Add Tourist Spot", new_destination_path %>
+<% end %>
+
 <p>Find me in app/views/tourguides/show.html.erb</p>
