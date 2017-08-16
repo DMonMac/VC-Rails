@@ -1,11 +1,10 @@
-<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Tourist Spot:</strong>
   <%= @destination.d_name %>
 </p>
 
-<%= image_tag @destination.d_pic.url if @destination.d_pic? %>
+<%= image_tag @destination.d_pic.url.to_s if @destination.d_pic? %>
 
 
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@destination.latitude}%2C#{@destination.longitude}" %>
@@ -22,7 +21,7 @@
 
 <h3>Nearby Tourist Spots in <%= @destination.tourguide.tg_first_name %> <%= @destination.tourguide.tg_last_name %>'s Itenerary</h3>
 <ul>
-  <% for destination in @destination.nearbys(2, :units => :km) %>
+  <% for destination in @destination.nearbys(5, :units => :km) %>
     <% if @destination.tourguide_id == destination.tourguide_id %>
       <li><%= link_to destination.d_name, destination %> (<%= destination.distance.round(2) %> km)</li>
       <% end %>

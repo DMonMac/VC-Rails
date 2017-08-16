@@ -72,3 +72,7 @@ gem 'ratyrate'
 
 # For .scss editing
 gem 'bootstrap-sass'
+
+# For javascript
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'jquery-turbolinks'
