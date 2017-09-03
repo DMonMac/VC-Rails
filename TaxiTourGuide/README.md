@@ -1,4 +1,4 @@
-## **[![RAILS]("Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES: _![TTG Logo]() Taxi Tour Guide_**
+## **[![RAILS](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/RoRLogo1.png "Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES: _![TTG Logo](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/TTG3.png "Taxi Tour Guide") Taxi Tour Guide_**
 
 ### THE CHALLENGE
 
@@ -14,7 +14,7 @@ Having taxi drivers as tour guides here in Baguio is not new (as my partner Regg
 
 ### THE APP
 
-![Home Page]()
+![Home Page](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/01HomePage.png)
 
 The Taxi Tour Guide App allows taxi drivers to serve as tour guides for tourists in the area. Using this app, drivers will be able to present themselves as tour guides. Think of it as a directory of taxi drivers willing to tour visitors around the city.
 
@@ -24,34 +24,36 @@ The Taxi Tour Guide App allows taxi drivers to serve as tour guides for tourists
 #### Tourist or Taxi Tour Guide?
 Firstly, you can decide to be either a tourist or a tour guide.
 
-![Tourist?]() ![Taxi Tour Guide?]()
+![Tourist?](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/02BeATourist.png)
+
+![Taxi Tour Guide?](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/03BeATourGuide.png)
 
 - #### As a Tourist
     Mainly, you'll be able to view the contact details of the Taxi Tour Guides who've signed up in the app.
 
     - #### Tourist's view:
 
-        ![Tourist Contact View]()
+        ![Tourist Contact View](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/04TouristsView.png)
 
     - #### Guest's view:
 
-        ![Guest Contact View]()
+        ![Guest Contact View](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/05GuestsView.png)
 
     Notice that those who don't log in to the app won't be able to see the contact details.
 
     - #### See all Taxi Tour Guides
         To be fair, even non-users will be able to see this, but anyway a list of available Taxi Tour Guides is available (I apologize for the shady profile pictures):
 
-        ![TTG Index]()
+        ![TTG Index](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/06TTGIndex.png)
 
     - #### See all Tourist Spots
         Again, non-users will also be able to see these. It's a list of tourist locations which are part of a Taxi Tour Guide's Itinerary. The Taxi Tour Guide's name and hourly rate are also shown.
 
-        ![Spot Index]()
+        ![Spot Index](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/07SpotIndex.png)
 
         It's also possible to search nearby tourist spots (or, indeed, the same tourist spot) so the Tourist can decide to add that to where they want to go.
 
-        ![Nearby Spots]()
+        ![Nearby Spots](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/08Nearbys.png)
 
 
 - #### As a Taxi Tour Guide
@@ -59,27 +61,27 @@ Firstly, you can decide to be either a tourist or a tour guide.
 
     - #### Tourist's Sign Up page:
 
-        ![Tourist Sign Up]()
+        ![Tourist Sign Up](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/09TouristsSignUp.png)
 
     - #### Taxi Tour Guide's Sign Up Page:
 
-        ![Taxi Tour Guide Sign Up]()
+        ![Taxi Tour Guide Sign Up](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/10TTGsSignUp.png)
 
     - #### TTG Profile Page
 
         The Taxi Tour Guide's Profile page will look like this:
 
-        ![TTGProfilePage]()
+        ![TTGProfilePage](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/11TTGProfile.png)
 
         The initial idea for the profile was that the Taxi Tour Guide will be able to add tourist spots which will be part of his/her 'itinerary.'
 
-        ![New Spot]()
+        ![New Spot](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/12AddSpot.png)
 
-        ![Itinerary in Profile]()
+        ![Itinerary in Profile](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/13Itinerary.png)
 
         The Tourist Spot would also have it's own 'profile page' giving a brief description of the location.
 
-        ![Spot Profile]()
+        ![Spot Profile](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/14SpotProfile.png)
 
         The idea is that the Taxi Tour Guides would have the opportunity to "show off" their knowledge about the tourists spots, and that would give them somewhat an edge over the other Taxi Tour Guides*.
 
