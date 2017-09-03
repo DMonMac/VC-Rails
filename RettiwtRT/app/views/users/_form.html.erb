@@ -1,0 +1,16 @@
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %> <%#Code to display error messages on the signup form. Common Rails convention of using a dedicated shared/ directory for partials expected to be used in views across multiple controllers.%>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %> <%#Code to display error messages on the signup form. %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %> <%#Code to display error messages on the signup form. %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %> <%#Code to display error messages on the signup form. %>
+
+  <%= f.label :password_confirmation, "Confirmation" %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %> <%#Code to display error messages on the signup form. %>
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
