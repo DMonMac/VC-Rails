@@ -1,0 +1,43 @@
+<h1>Sign Up</h1>
+
+<%= form_for(@user, url: signup_path) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :email %>
+      <br>
+      <%= f.email_field :email %>
+      <br>
+
+      <%= f.label :first_name %>
+      <br>
+      <%= f.text_field :first_name %>
+      <br>
+
+      <%= f.label :last_name %>
+      <br>
+      <%= f.text_field :last_name %>
+      <br>
+
+      <div class="field">
+        <label for="user_password">Password</label>
+        <em>(8 characters minimum)</em>
+        <br>
+        <input autocomplete="off" type="password" name="user[password]" id="user_password">
+      </div>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <br>
+      <%= f.password_field :password_confirmation %>
+      <br>
+      <br>
+      <%= f.file_field :avatar %>
+      <br>
+      <%= f.label :remote_avatar_url, "or image URL" %><br />
+      <%= f.text_field :remote_avatar_url %>
+      <br>
+      <br>
+      <%= f.submit "Create my account" %>
+      <br>
+<% end %>
+
+<p>Find me in app/views/users/new.html.erb</p>
