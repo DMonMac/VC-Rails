@@ -1,0 +1,37 @@
+
+
+<div id="tg_show" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4" style="width: 400px;">
+      <%= image_tag @tourguide.tg_avatar.url, :style => "width: 100%" if @tourguide.tg_avatar? %>
+    </div>
+
+    <div class="col-sm-8">
+      <h1><%=@tourguide.tg_first_name %> <%=@tourguide.tg_last_name %></h1>
+
+
+      <h3>Hourly Rate:</h3>
+      <p><%= number_to_currency(@tourguide.tg_rate, unit: '₱') %></p>
+
+      <h3>Contact:</h3>
+      <% if user_signed_in? || tourguide_signed_in? %>
+      <p>E-mail:</strong> <%= @tourguide.email %><br>
+      <p>Phone: <%= number_to_phone(@tourguide.tg_phone) %></p>
+      <% else %>
+      <p>Please Sign In to view Contact Info</p>
+      <% end %>
+
+      <h3>Tourist Spots (<%= @tourguide.destinations.count %>)</h3>
+      <ol>
+        <% @destinations.each do |destination| %>
+          <li><%= link_to "#{destination.d_name}", destination %> <br></li>
+        <% end %>
+      </ol>
+      <% if tourguide_signed_in? && current_tourguide.id == @tourguide.id %>
+      <%= link_to "Add Tourist Spot", new_destination_path %>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>

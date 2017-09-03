@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  d_name: MyString
+  d_description: MyString
+  tourguide: one
+
+two:
+  d_name: MyString
+  d_description: MyString
+  tourguide: two

@@ -1,0 +1,37 @@
+<div id="d_show" class="jumbopic">
+  <%= image_tag @destination.d_pic.url.to_s, :style => "width: 100%" if @destination.d_pic? %>
+</div>
+
+<div id="d_show" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=500x500&sensor=false&zoom=16&markers=#{@destination.latitude}%2C#{@destination.longitude}" %>
+    </div>
+
+    <div class="col-sm-8">
+      <h1> <%= @destination.d_name %></h1>
+
+      <h3>Description:</h3>
+      <p><%= @destination.d_description %></p>
+
+      <h3>Taxi Tour Guide:</h3>
+      <p><%= link_to "#{@destination.tourguide.tg_first_name} #{@destination.tourguide.tg_last_name}", @destination.tourguide %></p>
+
+      <h4>Nearby Tourist Spots in <%= @destination.tourguide.tg_first_name %> <%= @destination.tourguide.tg_last_name %>'s Itenerary</h4>
+      <ul>
+        <% for destination in @destination.nearbys(5, :units => :km) %>
+          <% if @destination.tourguide_id == destination.tourguide_id %>
+            <li><%= link_to destination.d_name, destination %> (<%= destination.distance.round(2) %> km)</li>
+            <% end %>
+        <% end %>
+      </ul>
+      <% if tourguide_signed_in? && current_tourguide.id == @destination.tourguide.id %>
+        <%= link_to 'Edit', edit_destination_path(@destination) %> |
+        <%= link_to 'Destroy', @destination, method: :delete, data: { confirm: 'Are you sure?' } %> |
+      <% end %>
+      <%= link_to 'View all Tourist Spots', destinations_path %>
+    </div>
+
+  </div>
+
+</div>
