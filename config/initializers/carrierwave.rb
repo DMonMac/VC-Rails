@@ -1,1 +1,0 @@
-require 'carrierwave/storage/fog'
