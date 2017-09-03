@@ -77,3 +77,19 @@ As mentioned earlier, your home page displays posts of other users you've follow
 When you click on one of the names, there'll be a button above that user's microposts that'll allow you to follow/unfollow that user.
 
 ![]()
+
+In the Home page, if you click on the following/followers below your avatar, you should be able to see a list of them.
+
+![]()
+
+![]()
+
+#### ADMIN
+In order to log in as an admin, use this account:
+| EMAIL | PASSWORD |
+| - | - |
+| example@railstutorial.org | foobar |
+
+You can now delete users in the app.
+
+![]()
