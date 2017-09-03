@@ -14,14 +14,16 @@ Use Devise*
 \*That's enough of defending myself. Now onto the app...
 
 ### THE APP
+
 I suppose everyone is familiar with Twitter. This app is basically trying to emulate some of the basic features of Twitter:
 
-- [Authentication](#)
-- [Microposts](#)
-- [Following Users](#)
-- [Admin](#)
+- [WELCOME(?) PAGE](#)
+- [USER ACCOUNTS](#)
+- [MICROPOSTS](#)
+- [FOLLOWING USERS](#)
+- [ADMIN](#)
 
-#### Home
+#### WELCOME(?) PAGE
 
 I probably should send a warning image right now:
 
@@ -31,11 +33,37 @@ That's right, MIRRORED!
 
 This was done on the premise that since everyone is pretty familiar with twitter functions, and there is no need for this one to be normal, this app should be navigated by instinct rather than vision. Because, seriously, your eyes will hurt.
 
-#### Authentication
+#### USER ACCOUNTS
+
 After getting used to the mirror effect, you can start creating an account so that you can navigate through the app:
 
 ![]()
 
-Or if, like me, you have an account already, you can simply log in right away.
+Or if, like me, you have an account already, you can simply log in right away...
 
 ![]()
+
+- #### Profile Page
+    The profile page looks like this:
+
+    ![]()
+
+    And you can edit your name, email, password, and avatar (though you'll need a Gravatar account to do that).
+
+    ![]()
+
+- #### Home
+    For logged in users, this is the Home page, where you can view the microposts of those you followed, and create your own as well.
+
+    ![]()
+
+#### MICROPOSTS
+For microposts, you can upload an image along with your text...
+
+![]()
+
+Or delete a post of yours.
+
+![]()
+
+#### FOLLOWING USERS
