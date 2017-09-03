@@ -93,4 +93,4 @@ In order to log in as an admin, use this account:
 
 You can now delete users in the app.
 
-![Delete User]()
+![Delete User](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/13DeleteUser.png)
