@@ -5,3 +5,6 @@
 
 ### Notes
 There are 2 'clones' here: One using Devise authentication and one using an authentication made from 'scratch'.
+
+### Progress
+Admittedly, not that much. I'm still working on the booking and payments section...
