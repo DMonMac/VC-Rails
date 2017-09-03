@@ -1,0 +1,97 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+/*UNIVERSAL*/
+body{
+  background: #2c5828;
+  font-family: 'VT323', monospace;
+  font-family: 'Share Tech Mono', monospace;
+  color: #ffffff;
+}
+
+/*NAVBAR*/
+.container-fluid {
+  padding: 10px 15px;
+  font-size: 15px;
+}
+
+.navbar-nav > li {
+    color: #9d9d9d;
+    line-height: 49px;
+    text-align: center;
+}
+
+a {
+    color: #9d9d9d;
+    line-height: 49px;
+}
+
+a:hover, a:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+  background: #222222;
+}
+
+.dropdown-menu > li > a {
+  color: #9d9d9d;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #fff;
+  background: none;
+}
+
+/*Home Page*/
+@media screen and (min-width: 768px) {
+  .container .jumbotron, .container-fluid .jumbotron {
+    border-radius: 25px;
+    margin: 30px 120px;
+    padding: 145px 60px;
+    border-color: #222222;
+    border-style: solid;
+    border-width: 20px;
+    text-align: center;
+    font-size: 65px;
+    h1 {
+      font-size: 65px;
+
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+}
+
+
+.container .jumbotron, .container-fluid .jumbotron {
+  border-radius: 25px;
+  margin: 30px 120px;
+  padding: 145px 60px; 
+  border-color: #222222;
+  border-style: solid;
+  border-width: 20px;
+  text-align: center;
+      background-color: #000000;
+}
+
+.container {
+  .row {
+    .col-sm-6 {
+      text-align: center;
+      padding: 40px 0px;
+      a {
+        font-size: 35px;
+        color: #222222;
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+}
