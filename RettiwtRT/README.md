@@ -18,11 +18,11 @@ Use Devise*
 
 I suppose everyone is familiar with Twitter. This app is basically trying to emulate some of the basic features of Twitter:
 
-- [WELCOME(?) PAGE](#)
-- [USER ACCOUNTS](#)
-- [MICROPOSTS](#)
-- [FOLLOWING USERS](#)
-- [ADMIN](#)
+- [WELCOME(?) PAGE](#welcome-page)
+- [USER ACCOUNTS](#user-accounts)
+- [MICROPOSTS](#microposts)
+- [FOLLOWING USERS](#following-users)
+- [ADMIN](#admin)
 
 #### WELCOME(?) PAGE
 
