@@ -1,4 +1,4 @@
-## **[![RAILS]("Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES: _![]() Taxi Tour Guide_**
+## **[![RAILS]("Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES: _![TTG Logo]() Taxi Tour Guide_**
 
 ### THE CHALLENGE
 
@@ -39,6 +39,21 @@ Firstly, you can decide to be either a tourist or a tour guide.
 
     Notice that those who don't log in to the app won't be able to see the contact details.
 
+    - #### See all Taxi Tour Guides
+        To be fair, even non-users will be able to see this, but anyway a list of available Taxi Tour Guides is available (I apologize for the shady profile pictures):
+
+        ![TTG Index]()
+
+    - #### See all Tourist Spots
+        Again, non-users will also be able to see these. It's a list of tourist locations which are part of a Taxi Tour Guide's Itinerary. The Taxi Tour Guide's name and hourly rate are also shown.
+
+        ![Spot Index]()
+
+        It's also possible to search nearby tourist spots (or, indeed, the same tourist spot) so the Tourist can decide to add that to where they want to go.
+
+        ![Nearby Spots]()
+
+
 - #### As a Taxi Tour Guide
     A Taxi Tour Guide has more work to do on the app as they will have to fix their profile which will be viewed by users of the app. With the sign up alone, there are a lot of details the Taxi Tour Guide has to fill in.
 
@@ -68,6 +83,9 @@ Firstly, you can decide to be either a tourist or a tour guide.
 
         The idea is that the Taxi Tour Guides would have the opportunity to "show off" their knowledge about the tourists spots, and that would give them somewhat an edge over the other Taxi Tour Guides*.
 
-        > \* When this was presented though, it was suggested that instead of individual locations, it would be much simpler if the taxi drivers we're just to present their route and the time to complete the route as the Tourists pay them per hour. I realized then that that was a good idea, so I plan to add that when my abilities in coding allow me to do so.
+        > \* When this was presented though, it was suggested that instead of individual locations, it would be much simpler if the taxi drivers we're just to present their route and the time to complete the route as the Tourists pay them per hour. I realized then that that was a better idea, so I plan to add that when my abilities in coding allow me to do so.
 
-### FUTURE PLANS
+#### FUTURE PLANS
+- As mentioned earlier, the Taxi Tour Guides should be able to add their route and the time to complete it.
+- An audio for a narrator describing the tourist destination as the tour is going on, so that the language barrier won't be too much of an issue.
+- Ability to hire a Taxi Tour Guide through the app.
