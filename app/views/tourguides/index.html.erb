@@ -1,6 +1,0 @@
-<h1>Taxi Tour Guides</h1>
-<% @tourguides.each do |tg| %>
-<%= image_tag tg.tg_avatar.url(:thumb) if tg.tg_avatar? %>
-<%= link_to "#{tg.tg_first_name} #{tg.tg_last_name}", tg %><br>
-<% end %>
-<p>Find me in app/views/tourguides/index.html.erb</p>
