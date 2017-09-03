@@ -19,6 +19,7 @@ I suppose everyone is familiar with Twitter. This app is basically trying to emu
 - [Authentication](#)
 - [Microposts](#)
 - [Following Users](#)
+- [Admin](#)
 
 #### Home
 
@@ -29,3 +30,12 @@ I probably should send a warning image right now:
 That's right, MIRRORED!
 
 This was done on the premise that since everyone is pretty familiar with twitter functions, and there is no need for this one to be normal, this app should be navigated by instinct rather than vision. Because, seriously, your eyes will hurt.
+
+#### Authentication
+After getting used to the mirror effect, you can start creating an account so that you can navigate through the app:
+
+![]()
+
+Or if, like me, you have an account already, you can simply log in right away.
+
+![]()
