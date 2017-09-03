@@ -90,7 +90,6 @@ In order to log in as an admin, use this account:
 | EMAIL | PASSWORD |
 | --- | --- |
 | example@railstutorial.org | foobar |
-| --- | --- |
 
 You can now delete users in the app.
 
