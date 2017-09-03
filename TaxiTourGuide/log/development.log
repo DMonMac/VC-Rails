@@ -30122,3 +30122,478 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:02:33 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 250ms (Views: 243.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for 127.0.0.1 at 2017-09-03 19:03:50 +0800
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  [1m[36mTourguide Load (0.2ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Tourguide Load (0.0ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTourguide Load (0.1ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Tourguide Load (0.3ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered destinations/index.html.erb within layouts/application (95.2ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 154ms (Views: 135.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/tourguides" for 127.0.0.1 at 2017-09-03 19:03:55 +0800
+Processing by TourguidesController#index as HTML
+  Rendering tourguides/index.html.erb within layouts/application
+  [1m[36mTourguide Load (0.4ms)[0m  [1m[34mSELECT "tourguides".* FROM "tourguides"[0m
+  Rendered tourguides/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/destinations" for 127.0.0.1 at 2017-09-03 19:03:59 +0800
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  [1m[36mTourguide Load (0.2ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Tourguide Load (0.0ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTourguide Load (0.2ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Tourguide Load (0.0ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered destinations/index.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tourguides" for 127.0.0.1 at 2017-09-03 19:04:04 +0800
+Processing by TourguidesController#index as HTML
+  Rendering tourguides/index.html.erb within layouts/application
+  [1m[36mTourguide Load (0.2ms)[0m  [1m[34mSELECT "tourguides".* FROM "tourguides"[0m
+  Rendered tourguides/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tourguides/3" for 127.0.0.1 at 2017-09-03 19:04:07 +0800
+Processing by TourguidesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTourguide Load (0.3ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tourguides/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "destinations" WHERE "destinations"."tourguide_id" = ?[0m  [["tourguide_id", 3]]
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."tourguide_id" = ?[0m  [["tourguide_id", 3]]
+  Rendered tourguides/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 40.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tourguides/1" for 127.0.0.1 at 2017-09-03 19:04:11 +0800
+Processing by TourguidesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTourguide Load (0.1ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tourguides/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "destinations" WHERE "destinations"."tourguide_id" = ?[0m  [["tourguide_id", 1]]
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."tourguide_id" = ?[0m  [["tourguide_id", 1]]
+  Rendered tourguides/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:04:15 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_bs_js.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tourguides" for 127.0.0.1 at 2017-09-03 19:04:17 +0800
+Processing by TourguidesController#index as HTML
+  Rendering tourguides/index.html.erb within layouts/application
+  [1m[36mTourguide Load (0.5ms)[0m  [1m[34mSELECT "tourguides".* FROM "tourguides"[0m
+  Rendered tourguides/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_bs_js.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:04:19 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for 127.0.0.1 at 2017-09-03 19:04:20 +0800
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  [1m[36mTourguide Load (0.2ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Tourguide Load (0.0ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTourguide Load (0.2ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Tourguide Load (0.0ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered destinations/index.html.erb within layouts/application (16.7ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tourguides" for 127.0.0.1 at 2017-09-03 19:04:25 +0800
+Processing by TourguidesController#index as HTML
+  Rendering tourguides/index.html.erb within layouts/application
+  [1m[36mTourguide Load (0.2ms)[0m  [1m[34mSELECT "tourguides".* FROM "tourguides"[0m
+  Rendered tourguides/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/destinations" for 127.0.0.1 at 2017-09-03 19:04:29 +0800
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  [1m[36mTourguide Load (0.3ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Tourguide Load (0.0ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTourguide Load (0.1ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Tourguide Load (0.0ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered destinations/index.html.erb within layouts/application (16.4ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:04:45 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_bs_js.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:04:46 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bs_js.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-09-03 19:11:03 +0800
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 40.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-03 19:11:10 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_bs_js.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-03 19:11:20 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8qkR6U1xEyO84mYcV3cRHGINZ1gecnbUgnpkAO31Ww5rAmySX73i1ZzKdcO0M2ocFREU30eTMoClJEox9joenw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-09-03 11:11:20.196962"], ["last_sign_in_at", "2017-08-17 07:11:42.617741"], ["sign_in_count", 8], ["updated_at", "2017-09-03 11:11:20.198046"], ["id", 1]]
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:20 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:29 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:30 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bs_js.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:31 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_bs_js.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2017-09-03 19:11:32 +0800
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:32 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_bs_js.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:34 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2017-09-03 19:11:34 +0800
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:35 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_bs_js.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2017-09-03 19:11:36 +0800
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_bs_js.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:37 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2017-09-03 19:11:38 +0800
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_bs_js.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:39 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2017-09-03 19:11:40 +0800
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_bs_js.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:41 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2017-09-03 19:11:42 +0800
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:11:43 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bs_js.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tourguides" for 127.0.0.1 at 2017-09-03 19:17:04 +0800
+Processing by TourguidesController#index as HTML
+  Rendering tourguides/index.html.erb within layouts/application
+  [1m[36mTourguide Load (0.3ms)[0m  [1m[34mSELECT "tourguides".* FROM "tourguides"[0m
+  Rendered tourguides/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_bs_js.html.erb (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tourguides/1" for 127.0.0.1 at 2017-09-03 19:17:07 +0800
+Processing by TourguidesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTourguide Load (0.2ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tourguides/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "destinations" WHERE "destinations"."tourguide_id" = ?[0m  [["tourguide_id", 1]]
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."tourguide_id" = ?[0m  [["tourguide_id", 1]]
+  Rendered tourguides/show.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_bs_js.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-03 19:17:44 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dFL7WPFH4C4v7sZWlmWy9Tcbam4bjIjwSr4QjtifUE2wEVo0yLYBYT0k010/Zdvbl4oxcpuEjhWcra5a6gLNZg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-03 19:17:44 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_notifs.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tourguides" for 127.0.0.1 at 2017-09-03 19:17:48 +0800
+Processing by TourguidesController#index as HTML
+  Rendering tourguides/index.html.erb within layouts/application
+  [1m[36mTourguide Load (0.4ms)[0m  [1m[34mSELECT "tourguides".* FROM "tourguides"[0m
+  Rendered tourguides/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_bs_js.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tourguides/1" for 127.0.0.1 at 2017-09-03 19:17:50 +0800
+Processing by TourguidesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTourguide Load (0.2ms)[0m  [1m[34mSELECT  "tourguides".* FROM "tourguides" WHERE "tourguides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tourguides/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "destinations" WHERE "destinations"."tourguide_id" = ?[0m  [["tourguide_id", 1]]
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."tourguide_id" = ?[0m  [["tourguide_id", 1]]
+  Rendered tourguides/show.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_bs_js.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_notifs.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.7ms)
+
+
