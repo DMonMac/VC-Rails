@@ -1,0 +1,50 @@
+
+<%= image_tag @user.avatar.url if @user.avatar? %><br>
+
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+
+<%= @user.email %>
+<br>
+<%= @user.created_at %>
+<br>
+<%= @user.updated_at %>
+<br>
+
+<section class="stats">
+  <%= render 'shared/stats' %>
+</section>
+
+
+<% if @user.homes.any? %>
+  <h3>Homes (<%= @user.homes.count %>)</h3>
+  <ol class="homes">
+    <%= render @homes %>
+  </ol>
+<% end %>
+
+<br>
+
+<% if logged_in? %>
+    <%= render 'follow_form' %>
+<!--    <h3>Home Feed</h3>
+     <%= render 'shared/feed' %>
+    <br>
+-->
+    <% if current_user?(@user) %>
+      <%= link_to "Add Home", new_home_path %>
+    <% end %>
+
+    <% if current_user.admin? && !current_user?(@user)%>
+      <%= link_to "Delete #{@user.first_name} #{@user.last_name}'s account", @user, method: :delete, data: { confirm: "You sure?"} %>
+    <% end %>
+
+<% else %>
+<% end %>
+
+
+
+<p>
+  <%= Time.now %>
+  <br>
+  Find me in app/views/users/show.html.erb
+</p>

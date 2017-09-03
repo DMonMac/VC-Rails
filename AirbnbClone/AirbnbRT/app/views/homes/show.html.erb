@@ -1,0 +1,67 @@
+<div id="home-<%= @home.id %>">
+
+  <span >
+    <h1><%= "#{@home.name} (h#{(@home.id)})" %></h1>
+  </span>
+  <span>
+    <%= image_tag @home.picture.url if @home.picture? %>
+    <br><br>
+  </span>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @home.address %>
+  </p>
+  <p>
+    <strong>Latitude:</strong>
+    <%= @home.latitude %>
+  </p>
+  <p>
+    <strong>Longitude:</strong>
+    <%= @home.longitude %>
+  </p>
+
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@home.latitude}%2C#{@home.longitude}" %>
+
+  <h3>Nearby Homes</h3>
+  <ul>
+  <% for home in @home.nearbys(10) %>
+    <li><%= link_to home.address, home %> (<%= home.distance.round(2) %> miles)</li>
+  <% end %>
+  </ul>
+
+
+
+
+  <span>
+    Description:<br>
+    <%= @home.description %>
+  </span>
+  <br><br>
+  <span>
+    Price<br>
+    <%= @home.price %>
+  </span>
+  <br><br>
+  <span>
+    Host:<br>
+    <%= link_to "#{@home.user.first_name} #{@home.user.last_name}", @home.user %>
+  </span>
+  <br><br>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(@home.created_at) %> ago.<br>
+    Updated <%= time_ago_in_words(@home.updated_at) %> ago.
+  </span>
+  <br><br>
+
+  <% if current_user?(@home.user) %>
+  <%= link_to "Edit Home", edit_home_path(@home) %>
+
+    <%=
+      link_to "Delete Home", @home, method: :delete, data: { confirm: "You are about to delete #{@home.name}. Are you sure?"}
+    %>
+  <% end %>
+
+  <%= link_to "View All Homes", homes_path %>
+
+</div>

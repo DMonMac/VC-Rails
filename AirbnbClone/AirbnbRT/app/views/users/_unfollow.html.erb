@@ -1,0 +1,5 @@
+<!--'remote:' calls Ajax method - so that the user doesn't need to leave the page when clicking the follow/unfollow button
+-->
+<%= form_for(current_user.active_relationships.find_by(followed_id: @user.id), html: { method: :delete }) do |f| %>
+  <%= f.submit "Unfollow" %>
+<% end %>
