@@ -1,6 +1,7 @@
 ## **[![RAILS]("Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES: _RettiwtRT_**
 
 ### THE CHALLENGE
+
 > Your task is to create your own twitter clone using the board we have created together.
 Use "scaffold"*
 Use Devise*
@@ -53,9 +54,11 @@ Or if, like me, you have an account already, you can simply log in right away...
     ![]()
 
 - #### Home
-    For logged in users, this is the Home page, where you can view the microposts of those you followed, and create your own as well.
+    For logged in users, this is the Home page:
 
     ![]()
+
+    Here you can see who you're following and your followers. You can view the microposts of those you followed, and create your own as well.
 
 #### MICROPOSTS
 For microposts, you can upload an image along with your text...
@@ -67,3 +70,10 @@ Or delete a post of yours.
 ![]()
 
 #### FOLLOWING USERS
+As mentioned earlier, your home page displays posts of other users you've followed. There's a list of all the users in the app.
+
+![]()
+
+When you click on one of the names, there'll be a button above that user's microposts that'll allow you to follow/unfollow that user.
+
+![]()
