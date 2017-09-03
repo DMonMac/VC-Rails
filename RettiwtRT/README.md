@@ -28,7 +28,7 @@ I suppose everyone is familiar with Twitter. This app is basically trying to emu
 
 I probably should send a warning image right now:
 
-![]()
+![Home]()
 
 That's right, MIRRORED!
 
@@ -38,51 +38,51 @@ This was done on the premise that since everyone is pretty familiar with twitter
 
 After getting used to the mirror effect, you can start creating an account so that you can navigate through the app:
 
-![]()
+![Sign Up]()
 
 Or if, like me, you have an account already, you can simply log in right away...
 
-![]()
+![Log In]()
 
 - #### Profile Page
     The profile page looks like this:
 
-    ![]()
+    ![Profile]()
 
     And you can edit your name, email, password, and avatar (though you'll need a Gravatar account to do that).
 
-    ![]()
+    ![Edit Profile]()
 
 - #### Home
     For logged in users, this is the Home page:
 
-    ![]()
+    ![User Home Page]()
 
     Here you can see who you're following and your followers. You can view the microposts of those you followed, and create your own as well.
 
 #### MICROPOSTS
 For microposts, you can upload an image along with your text...
 
-![]()
+![Create Post]()
 
 Or delete a post of yours.
 
-![]()
+![Del Post]()
 
 #### FOLLOWING USERS
 As mentioned earlier, your home page displays posts of other users you've followed. There's a list of all the users in the app.
 
-![]()
+![User List]()
 
 When you click on one of the names, there'll be a button above that user's microposts that'll allow you to follow/unfollow that user.
 
-![]()
+![Follow]()
 
 In the Home page, if you click on the following/followers below your avatar, you should be able to see a list of them.
 
-![]()
+![Following]()
 
-![]()
+![Followers]()
 
 #### ADMIN
 In order to log in as an admin, use this account:
@@ -92,4 +92,4 @@ In order to log in as an admin, use this account:
 
 You can now delete users in the app.
 
-![]()
+![Delete User]()
