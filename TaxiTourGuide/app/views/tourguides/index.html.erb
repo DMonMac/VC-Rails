@@ -1,0 +1,22 @@
+<h1 id="d_header">Taxi Tour Guides</h1>
+
+<br>
+<br>
+
+<div class="container" id="ttg_index">
+  <% @tourguides.in_groups_of(3) do |group| %>
+    <div class="row">
+    <% group.compact.each do |tg| %>
+      <div class="col-md-4">
+        <div class="card" style="width: 300px;">
+            <%= image_tag tg.tg_avatar.url, :style => "width: 300px" if tg.tg_avatar? %>
+            <div class="card-body">
+              <h4 class="card-title"><%= link_to "#{tg.tg_first_name} #{tg.tg_last_name}", tg %></h4>
+              <p class="card-text"><%= number_to_currency(tg.tg_rate, unit: '₱') %>/Hr.</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

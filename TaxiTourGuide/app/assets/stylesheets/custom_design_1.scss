@@ -1,0 +1,217 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+/*UNIVERSAL*/
+body{
+  background: #2c5828;
+  font-family: 'VT323', monospace;
+  font-family: 'Share Tech Mono', monospace;
+  color: #ffffff;
+}
+
+
+
+.btn{
+  color: #111111;
+  padding: 0px 10px;
+  line-height: 0;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #ffffff;
+    border-color: #111111;
+    border-width: 3px;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #111111;
+    border-color: #ffffff;
+}
+
+/*NAVBAR*/
+.container-fluid {
+  padding: 10px 15px;
+  font-size: 20px;
+}
+
+.navbar-nav > li {
+    color: #9d9d9d;
+    line-height: 49px;
+    text-align: center;
+}
+
+a {
+    color: #9d9d9d;
+    line-height: 49px;
+}
+
+a:hover, a:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+  background: #111111;
+  font-size: 20px;
+}
+
+.dropdown-menu > li > a {
+  color: #9d9d9d;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #fff;
+  background: none;
+}
+
+
+
+
+/*Home Page*/
+@media screen and (min-width: 768px) {
+  .container .jumbotron, .container-fluid .jumbotron {
+    border-radius: 25px;
+    margin: 30px 120px;
+    padding: 145px 60px;
+    border-color: #111111;
+    border-style: solid;
+    border-width: 20px;
+    text-align: center;
+    font-size: 65px;
+    h1 {
+      font-size: 65px;
+
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+}
+
+
+.container .jumbotron, .container-fluid .jumbotron {
+  border-radius: 25px;
+  margin: 30px 120px;
+  padding: 145px 60px;
+  border-color: #111111;
+  border-style: solid;
+  border-width: 20px;
+  text-align: center;
+      background-color: #000000;
+}
+
+.container {
+  .row {
+    .col-sm-6 {
+      text-align: center;
+      padding: 40px 0px;
+      a {
+        font-size: 35px;
+        color: #111111;
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+}
+
+/*DESTINATIONS INDEX*/
+#d_table {
+  color: #111111;
+  a {
+    color: #111111;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+   td{
+    line-height: 10;
+    border: none;
+    font-size: 25px;
+
+   }
+   th {
+     font-size: 30px;
+   }
+}
+
+#near_loc{
+  color: #111111;
+
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#d_header {
+  color: #111111;
+  font-size: 45px;
+  margin: 35px;
+}
+
+/*TTG INDEX*/
+#ttg_index {
+  a {
+    color: #111111;
+    font-size: 30px;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  p {
+    color: #111111;
+    font-size: 20px;
+  }
+}
+
+
+/*D SHOW*/
+#d_show {
+  .jumbopic {
+    overflow: hidden;
+    max-height: 300px;
+    padding: 0;
+    width: 100%;
+  }
+  h1, h3, a, li, h4, p {
+    color: #111111;
+  }
+  a:hover {
+    color: #ffffff;
+  }
+}
+
+/*TG_SHOW*/
+#tg_show {
+  h1, h3, p, ol, a {
+    color: #111111;
+  }
+  a:hover {
+    color: #ffffff;
+  }
+}
+
+/*Tourist sign up*/
+
+#forms {
+  color: #111111;
+  a {
+    color: #111111;
+    font-size: 20px;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  .field {
+    font-size: 25px;
+  }
+  .actions {
+    font-size: 20px;
+  }
+}
