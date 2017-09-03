@@ -1,4 +1,4 @@
-## **[![RAILS]("Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES**
+## **[![RAILS](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/RoRLogo1.png "Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES**
 
 These are Ruby on Rails challenges from the Vivixx Bootcamp.
 
