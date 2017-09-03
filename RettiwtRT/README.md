@@ -25,3 +25,7 @@ I suppose everyone is familiar with Twitter. This app is basically trying to emu
 I probably should send a warning image right now:
 
 ![]()
+
+That's right, MIRRORED!
+
+This was done on the premise that since everyone is pretty familiar with twitter functions, and there is no need for this one to be normal, this app should be navigated by instinct rather than vision. Because, seriously, your eyes will hurt.
