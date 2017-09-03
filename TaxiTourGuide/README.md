@@ -19,8 +19,8 @@ Having taxi drivers as tour guides here in Baguio is not new (as my partner Regg
 The Taxi Tour Guide App allows taxi drivers to serve as tour guides for tourists in the area. Using this app, drivers will be able to present themselves as tour guides. Think of it as a directory of taxi drivers willing to tour visitors around the city.
 
 #### FEATURES
-- [As a Tourist]()
-- [As a Tour Guide]()
+- [As a Tourist](#as-a-tourist)
+- [As a Tour Guide](#as-a-taxi-tour-guide)
 #### Tourist or Taxi Tour Guide?
 Firstly, you can decide to be either a tourist or a tour guide.
 
