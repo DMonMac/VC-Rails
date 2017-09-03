@@ -1,24 +1,7 @@
-# README
+## **[![RAILS]("Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES: _Taxi Tour Guide_**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### THE CHALLENGE
 
-Things you may want to cover:
+> Create an app to pitch for a start up.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### THE APP
