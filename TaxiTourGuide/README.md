@@ -1,4 +1,4 @@
-## **[![RAILS](https://user-images.githubusercontent.com/29721601/30682137-e2e0413e-9eda-11e7-9df1-6a21225f2c10.png "Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES: _![TTG Logo](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/TTG3.png "Taxi Tour Guide") Taxi Tour Guide_**
+## **[![RAILS](https://user-images.githubusercontent.com/29721601/30682137-e2e0413e-9eda-11e7-9df1-6a21225f2c10.png "Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES: _![TTG Logo](https://user-images.githubusercontent.com/29721601/30682653-f9ca1c88-9edc-11e7-937f-b755d8397f05.png "Taxi Tour Guide") Taxi Tour Guide_**
 
 ### THE CHALLENGE
 
@@ -14,7 +14,7 @@ Having taxi drivers as tour guides here in Baguio is not new (as my partner Regg
 
 ### THE APP
 
-![Home Page](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/01HomePage.png)
+![Home Page](https://user-images.githubusercontent.com/29721601/30682639-f8d8b99c-9edc-11e7-8719-6ccb5c775eeb.png)
 
 The Taxi Tour Guide App allows taxi drivers to serve as tour guides for tourists in the area. Using this app, drivers will be able to present themselves as tour guides. Think of it as a directory of taxi drivers willing to tour visitors around the city.
 
@@ -24,36 +24,36 @@ The Taxi Tour Guide App allows taxi drivers to serve as tour guides for tourists
 #### Tourist or Taxi Tour Guide?
 Firstly, you can decide to be either a tourist or a tour guide.
 
-![Tourist?](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/02BeATourist.png)
+![Tourist?](https://user-images.githubusercontent.com/29721601/30682641-f8ddb762-9edc-11e7-9d31-24b7374d073e.png)
 
-![Taxi Tour Guide?](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/03BeATourGuide.png)
+![Taxi Tour Guide?](https://user-images.githubusercontent.com/29721601/30682640-f8d95c3a-9edc-11e7-8f33-282fcfca3c5c.png)
 
 - #### As a Tourist
     Mainly, you'll be able to view the contact details of the Taxi Tour Guides who've signed up in the app.
 
     - #### Tourist's view:
 
-        ![Tourist Contact View](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/04TouristsView.png)
+        ![Tourist Contact View](https://user-images.githubusercontent.com/29721601/30682642-f8e90a5e-9edc-11e7-9be1-286df0fc6961.png)
 
     - #### Guest's view:
 
-        ![Guest Contact View](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/05GuestsView.png)
+        ![Guest Contact View](https://user-images.githubusercontent.com/29721601/30682643-f8ebb808-9edc-11e7-976c-70fec2d6461e.png)
 
     Notice that those who don't log in to the app won't be able to see the contact details.
 
     - #### See all Taxi Tour Guides
         To be fair, even non-users will be able to see this, but anyway a list of available Taxi Tour Guides is available (I apologize for the shady profile pictures):
 
-        ![TTG Index](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/06TTGIndex.png)
+        ![TTG Index](https://user-images.githubusercontent.com/29721601/30682644-f90cbbd4-9edc-11e7-8c96-2d5ee17451a1.png)
 
     - #### See all Tourist Spots
         Again, non-users will also be able to see these. It's a list of tourist locations which are part of a Taxi Tour Guide's Itinerary. The Taxi Tour Guide's name and hourly rate are also shown.
 
-        ![Spot Index](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/07SpotIndex.png)
+        ![Spot Index](https://user-images.githubusercontent.com/29721601/30682645-f91f4074-9edc-11e7-8971-cd1d4a4c2c5d.png)
 
         It's also possible to search nearby tourist spots (or, indeed, the same tourist spot) so the Tourist can decide to add that to where they want to go.
 
-        ![Nearby Spots](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/08Nearbys.png)
+        ![Nearby Spots](https://user-images.githubusercontent.com/29721601/30682646-f91fe042-9edc-11e7-8282-a65e3beea3bb.png)
 
 
 - #### As a Taxi Tour Guide
@@ -61,27 +61,27 @@ Firstly, you can decide to be either a tourist or a tour guide.
 
     - #### Tourist's Sign Up page:
 
-        ![Tourist Sign Up](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/09TouristsSignUp.png)
+        ![Tourist Sign Up](https://user-images.githubusercontent.com/29721601/30682647-f936da54-9edc-11e7-8107-8b11e2ab9afb.png)
 
     - #### Taxi Tour Guide's Sign Up Page:
 
-        ![Taxi Tour Guide Sign Up](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/10TTGsSignUp.png)
+        ![Taxi Tour Guide Sign Up](https://user-images.githubusercontent.com/29721601/30682648-f937293c-9edc-11e7-9196-6cd8c4ac136e.png)
 
     - #### TTG Profile Page
 
         The Taxi Tour Guide's Profile page will look like this:
 
-        ![TTGProfilePage](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/11TTGProfile.png)
+        ![TTGProfilePage](https://user-images.githubusercontent.com/29721601/30682649-f952967c-9edc-11e7-9a7e-4c05e5f3211f.png)
 
         The initial idea for the profile was that the Taxi Tour Guide will be able to add tourist spots which will be part of his/her 'itinerary.'
 
-        ![New Spot](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/12AddSpot.png)
+        ![New Spot](https://user-images.githubusercontent.com/29721601/30682650-f9540200-9edc-11e7-959c-22dace2518c8.png)
 
-        ![Itinerary in Profile](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/13Itinerary.png)
+        ![Itinerary in Profile](https://user-images.githubusercontent.com/29721601/30682651-f964b3a2-9edc-11e7-944d-c531371dec95.png)
 
         The Tourist Spot would also have it's own 'profile page' giving a brief description of the location.
 
-        ![Spot Profile](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/14SpotProfile.png)
+        ![Spot Profile](https://user-images.githubusercontent.com/29721601/30682652-f98a6e44-9edc-11e7-9b40-6ead006f59cf.png)
 
         The idea is that the Taxi Tour Guides would have the opportunity to "show off" their knowledge about the tourists spots, and that would give them somewhat an edge over the other Taxi Tour Guides*.
 
