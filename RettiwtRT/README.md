@@ -28,7 +28,7 @@ I suppose everyone is familiar with Twitter. This app is basically trying to emu
 
 I probably should send a warning image right now:
 
-![Home](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/01Home.png)
+![Home](https://user-images.githubusercontent.com/29721601/30682467-54cc0eee-9edc-11e7-96b2-a1b743bcea00.png)
 
 That's right, MIRRORED!
 
@@ -38,51 +38,51 @@ This was done on the premise that since everyone is pretty familiar with twitter
 
 After getting used to the mirror effect, you can start creating an account so that you can navigate through the app:
 
-![Sign Up](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/02SignUp.png)
+![Sign Up](https://user-images.githubusercontent.com/29721601/30682364-06b232d8-9edc-11e7-887a-d30ff7da853b.png)
 
 Or if, like me, you have an account already, you can simply log in right away...
 
-![Log In](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/03Login.png)
+![Log In](https://user-images.githubusercontent.com/29721601/30682365-06b30abe-9edc-11e7-9a9d-8959fb9b7861.png)
 
 - #### Profile Page
     The profile page looks like this:
 
-    ![Profile](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/04Profile.png)
+    ![Profile](https://user-images.githubusercontent.com/29721601/30682366-06c503d6-9edc-11e7-8f53-0a28774f1105.png)
 
     And you can edit your name, email, password, and avatar (though you'll need a Gravatar account to do that).
 
-    ![Edit Profile](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/05EditProfile.png)
+    ![Edit Profile](https://user-images.githubusercontent.com/29721601/30682368-06c6a3e4-9edc-11e7-948d-116d46ac787f.png)
 
 - #### Home
     For logged in users, this is the Home page:
 
-    ![User Home Page](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/06UserHomePage.png)
+    ![User Home Page](https://user-images.githubusercontent.com/29721601/30682369-06c8154e-9edc-11e7-9ef2-58b5c9e524a6.png)
 
     Here you can see who you're following and your followers. You can view the microposts of those you followed, and create your own as well.
 
 #### MICROPOSTS
 For microposts, you can upload an image along with your text...
 
-![Create Post](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/07CreatePost.png)
+![Create Post](https://user-images.githubusercontent.com/29721601/30682367-06c67c2a-9edc-11e7-8e6c-b0a8913067bb.png)
 
 Or delete a post of yours.
 
-![Del Post](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/08DeletePost.png)
+![Del Post](https://user-images.githubusercontent.com/29721601/30682373-0702015a-9edc-11e7-92d2-f06ea624745b.png)
 
 #### FOLLOWING USERS
 As mentioned earlier, your home page displays posts of other users you've followed. There's a list of all the users in the app.
 
-![User List](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/09UserList.png)
+![User List](https://user-images.githubusercontent.com/29721601/30682371-06fda1d2-9edc-11e7-87c6-dcdab53cd971.png)
 
 When you click on one of the names, there'll be a button above that user's microposts that'll allow you to follow/unfollow that user.
 
-![Follow](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/10Follow.png)
+![Follow](https://user-images.githubusercontent.com/29721601/30682372-06ff0d1a-9edc-11e7-8620-19e8346793e7.png)
 
 In the Home page, if you click on the following/followers below your avatar, you should be able to see a list of them.
 
-![Following](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/11Following.png)
+![Following](https://user-images.githubusercontent.com/29721601/30682374-0703d1c4-9edc-11e7-9abc-16ed34d7449f.png)
 
-![Followers](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/12Followers.png)
+![Followers](https://user-images.githubusercontent.com/29721601/30682375-07349d72-9edc-11e7-9b22-de2eff6cb2a9.png)
 
 #### ADMIN
 In order to log in as an admin, use this account:
@@ -93,4 +93,4 @@ In order to log in as an admin, use this account:
 
 You can now delete users in the app.
 
-![Delete User](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRRRT/13DeleteUser.png)
+![Delete User](https://user-images.githubusercontent.com/29721601/30682376-073a661c-9edc-11e7-9446-71f76512b1d9.png)
