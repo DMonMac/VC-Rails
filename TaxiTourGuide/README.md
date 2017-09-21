@@ -1,4 +1,4 @@
-## **[![RAILS](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/RoRLogo1.png "Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES: _![TTG Logo](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/TTG3.png "Taxi Tour Guide") Taxi Tour Guide_**
+## **[![RAILS](https://user-images.githubusercontent.com/29721601/30682137-e2e0413e-9eda-11e7-9df1-6a21225f2c10.png "Rails")](http://rubyonrails.org/) VIVIXX CHALLENGES: _![TTG Logo](http://i1202.photobucket.com/albums/bb362/tremor221/Vivixx/VCRoR/VCRoRTTG/TTG3.png "Taxi Tour Guide") Taxi Tour Guide_**
 
 ### THE CHALLENGE
 
