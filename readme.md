@@ -5,6 +5,6 @@ These are Ruby on Rails challenges from the Vivixx Bootcamp.
 Click on the folders to see their documentation.
 
 ### Contents
-1. RettiwtRT - _Twitter clone following the tutorial on www.railstutorial.org_
-2. Airbnb Clones - _Working on copying the Airbnb website._
-3. TaxiTourGuide - _Pitch for a start-up app._
+1. [RettiwtRT](https://github.com/DMonMac/VC-Rails/tree/master/RettiwtRT) - _Twitter clone following the tutorial on www.railstutorial.org_
+2. [Airbnb Clones](https://github.com/DMonMac/VC-Rails/tree/master/AirbnbClone) - _Working on copying the Airbnb website._
+3. [TaxiTourGuide](https://github.com/DMonMac/VC-Rails/tree/master/TaxiTourGuide) - _Pitch for a start-up app._
