@@ -15,11 +15,12 @@ Use Devise*
 \*That's enough of defending myself. Now onto the app...
 
 ### RUN APP
-1. Copy the 'RettiwtRT' folder to your computer.
-2. In your terminal, set your directory to inside this folder.
-3. Type `bundle install`. You may need to type `bundle update` as well.
-4. Type `rails server` or `rails server`.
-5. Open http://localhost:3000/ in your browser.
+1. Make sure you have rails [installed](http://railsapps.github.io/installing-rails.html).
+2. Copy the 'RettiwtRT' folder to your computer.
+3. In your terminal, set your directory to inside this folder.
+4. Type `bundle install`. You may need to type `bundle update` as well.
+5. Type `rails server` or `rails server`.
+6. Open http://localhost:3000/ in your browser.
 
 ### THE APP
 
