@@ -12,6 +12,14 @@ The premise is that taxi drivers surely must know their way around the city. And
 
 Having taxi drivers as tour guides here in Baguio is not new (as my partner Reggie Cabutotan told me). It just that it happens by chance mostly. That is, they get hailed by a tourist who happens to want to have a tour of the city. With the help of this app, drivers won't have to rely on chance alone, as they will have a chance to present themselves as _the_ tour guide to hire.
 
+### RUN APP
+1. Copy the 'TaxiTourGuide' folder to your computer.
+2. In your terminal, set your directory to inside this folder.
+3. Type `bundle install`. You may need to type `bundle update` as well.
+4. Type `rails server` or `rails server`.
+5. Open http://localhost:3000/ in your browser.
+
+
 ### THE APP
 
 ![Home Page](https://user-images.githubusercontent.com/29721601/30682639-f8d8b99c-9edc-11e7-8719-6ccb5c775eeb.png)
